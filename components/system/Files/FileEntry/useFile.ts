@@ -46,6 +46,7 @@ const useFile = (url: string): UseFile => {
         if (processes[activePid].minimized) minimize(activePid);
         setForegroundId(activePid);
       } else {
+        console.log("open", pid, runUrl, icon);
         open(
           pid,
           { url: runUrl },

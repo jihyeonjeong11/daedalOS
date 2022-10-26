@@ -16,7 +16,6 @@ const useDoubleClick = (
     (event) => {
       const mouseEvent = event.clientX || event.clientY;
       const doubleClickEvent = event.type === "dblclick";
-
       if (!mouseEvent && !doubleClickEvent) return;
 
       const runHandler = (): void => {

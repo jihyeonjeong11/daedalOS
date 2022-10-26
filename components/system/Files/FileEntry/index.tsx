@@ -465,6 +465,7 @@ const FileEntry: FC<FileEntryProps> = ({
             fileManagerId &&
             !MOUNTABLE_EXTENSIONS.has(urlExt)
           ) {
+            console.log("1111");
             changeUrl(fileManagerId, url);
             blurEntry();
           } else if (openInFileExplorer && listView) {

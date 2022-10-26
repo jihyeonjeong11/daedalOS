@@ -13,11 +13,11 @@ const Window: FC<ComponentProcessProps> = ({ children, id }) => {
   const {
     linkElement,
     processes: { [id]: process },
-  } = useProcesses();
-  const { background, peekElement } = process || {};
-  const { foregroundId } = useSession();
-  const isForeground = id === foregroundId;
-  const { zIndex, ...focusableProps } = useFocusable(id);
+  } = useProcesses(); // useProcess 나중에 보기
+  const { background, peekElement } = process || {}; // background컬러, element ref 내용
+  const { foregroundId } = useSession(); // useSession 나중에 보기
+  const isForeground = id === foregroundId; // useSession 나중에 보기
+  const { zIndex, ...focusableProps } = useFocusable(id); //
   const windowTransitions = useWindowTransitions(id);
   const linkViewportEntry = useCallback(
     (viewportEntry: HTMLDivElement) =>
@@ -42,6 +42,7 @@ const Window: FC<ComponentProcessProps> = ({ children, id }) => {
       >
         <StyledPeekViewport ref={linkViewportEntry}>
           <Titlebar id={id} />
+
           {children}
         </StyledPeekViewport>
       </StyledWindow>
