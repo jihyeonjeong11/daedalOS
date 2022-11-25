@@ -109,7 +109,6 @@ const Menu: FC<MenuProps> = ({ subMenu }) => {
       adjustedOffsetX > 0 ? { ...newOffset, x: adjustedOffsetX } : newOffset
     );
   }, [items, subMenu, x, y]);
-
   return items ? (
     <StyledMenu
       ref={menuRef}

@@ -87,6 +87,10 @@ const useSessionContextState = (): SessionContextState => {
   const initializedSession = useRef(false);
 
   useEffect(() => {
+    console.log(windowStates);
+  }, [setWindowStates]);
+
+  useEffect(() => {
     if (sessionLoaded && !haltSession) {
       writeFile(
         SESSION_FILE,

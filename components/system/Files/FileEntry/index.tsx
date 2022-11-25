@@ -1,7 +1,7 @@
 import extensions from "components/system/Files/FileEntry/extensions";
 import {
   getModifiedTime,
-  getTextWrapData,
+  getTextWrapData
 } from "components/system/Files/FileEntry/functions";
 import useFile from "components/system/Files/FileEntry/useFile";
 import useFileContextMenu from "components/system/Files/FileEntry/useFileContextMenu";
@@ -27,7 +27,7 @@ import {
   useLayoutEffect,
   useMemo,
   useRef,
-  useState,
+  useState
 } from "react";
 import { useTheme } from "styled-components";
 import Button from "styles/common/Button";
@@ -48,14 +48,14 @@ import {
   SHORTCUT_ICON,
   SMALLEST_PNG_SIZE,
   USER_ICON_PATH,
-  VIDEO_FILE_EXTENSIONS,
+  VIDEO_FILE_EXTENSIONS
 } from "utils/constants";
 import {
   bufferToUrl,
   getFormattedSize,
   getHtmlToImage,
   isCanvasEmpty,
-  isYouTubeUrl,
+  isYouTubeUrl
 } from "utils/functions";
 import { spotlightEffect } from "utils/spotlightEffect";
 
@@ -465,7 +465,6 @@ const FileEntry: FC<FileEntryProps> = ({
             fileManagerId &&
             !MOUNTABLE_EXTENSIONS.has(urlExt)
           ) {
-            console.log("1111");
             changeUrl(fileManagerId, url);
             blurEntry();
           } else if (openInFileExplorer && listView) {

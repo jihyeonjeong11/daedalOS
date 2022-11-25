@@ -78,7 +78,6 @@ const RndWindow: FC<RndWindowProps> = ({ children, id, zIndex }) => {
     return () => {
       if (closing) {
         const [pid] = id.split(PROCESS_DELIMITER);
-
         setWindowStates((currentWindowStates) => ({
           ...currentWindowStates,
           [pid === id ? id : `${pid}${PROCESS_DELIMITER}${url}`]: {

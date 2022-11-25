@@ -13,3 +13,12 @@ useDoubleCLick 이후, 같은 파일의 openFile 펑션 -> useFile hook -> usePr
 4. \\wsl.localhost\Ubuntu\home\wjd\dev\daedalOS\contexts\process\functions.ts
 
 에서 open 안의 내용이 있다.
+
+5. processContext 의 setProcesses 를 통해 화면이 그려진다;.ㅣ
+
+베껴야할 내용
+
+1. contextFactory wrapper
+2. lazy component 하나
+3. processContex 내용
+4. react-rnd, react-draggable
